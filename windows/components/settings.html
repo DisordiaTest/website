@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="../../lib/jquery-3.2.1.min.js"></script>
+    <script src="../js/attrHelper.js"></script>
+    <script defer src="../js/settings.js"></script>
+
+    <!--&lt;!&ndash; 最新版本的 Bootstrap 核心 CSS 文件 &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <!--&lt;!&ndash; 最新的 Bootstrap 核心 JavaScript 文件 &ndash;&gt;-->
+    <!--<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+</head>
+<body style="background-color: white;height: 600px; width: 800px;margin: 0">
+    <div style="margin:0;position: relative;width: 100%;height: 100%;left: 0;top: 0;padding:10px 30px 10px 30px;box-sizing: border-box;
+        overflow: auto;">
+        <h3 style="display: block;width: 100%;">Preview</h3>
+        <div class="preview" style="width: 60%;height: 300px;background-color: #868686;background-position: center;background-repeat: no-repeat;background-size: 100% 100%">
+        </div>
+        <div style="height: 20px"></div>
+        <h4 style="display: block;margin-top: 5px;margin-bottom: 0;margin-top: 10px">ImageSrc</h4>
+        <input type="text" class="bkSrcSelector" style="display: block;font-size:medium;width: 60%;margin-top: 5px"/>
+        <h4 style="display: block;margin-top: 5px;margin-bottom: 0">FillType</h4>
+        <select class="bkFillType" style="margin-top: 5px">
+            <option value="1">Stretch</option>
+            <option value="2">Cover</option>
+            <option value="3">Contain</option>
+            <option value="4">Repeat</option>
+        </select>
+        <button onclick="SetBackGround()" style="text-align:center; display:block;height: 40px;margin-top: 30px">Commit</button>
+    </div>
+</body>
+</html>

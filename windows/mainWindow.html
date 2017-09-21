@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”renderer” content=”webkit” />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="../lib/jquery-3.2.1.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <script src="./js/template.js"></script>
+    <script src="./js/system.js"></script>
+    <script defer src="./js/startMenu.js"></script>
+    <script defer src="./js/deskComponents.js"></script>
+    <script src="./js/desktopItems.js"></script>
+    <script src="./js/attrHelper.js"></script>
+    <script>
+        $().ready(function(){
+            document.body.onselectstart = document.body.ondragstart = function(){return false;}
+        });
+    </script>
+
+</head>
+<body>
+    <div id="desktop">
+        <ul id="desk-items-ul"></ul>
+        <div id="startMenu">
+                <div id="leftSide">
+                    <div class="left">
+                        <div class="flex-list">
+                            <div class="userInfo menuItem">
+                                <div class="user-image"></div>
+                                <div class="user-name">profaneden disordia</div>
+                            </div>
+                            <div id="oftenUseAppList"></div>
+                            <div id="folderBtn" class="menuItem">
+                                <div class="appIcon"></div>
+                                <div class="appName">Open folder manager</div>
+                            </div>
+                            <div id="settingBtn" class="menuItem">
+                                <div class="appIcon"></div>
+                                <div class="appName">Settings</div>
+                            </div>
+                            <div id="allAppBtn" class="menuItem">
+                                <div class="appIcon"></div>
+                                <div class="appName">All Apps</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul class="appList">
+                        </ul>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="desk-bar">
+        <div id="startBtn" class="commonBtn" open="false"></div>
+        <div id="searchBtn" class="commonBtn"></div>
+        <div id="task-list">
+            <ul></ul>
+        </div>
+        <div id="deskTimer" class="commonTextBtn">00:00<br/>2000/1/1</div>
+        <div id="showDeskBtn" class="commonTextBtn"></div>
+    </div>
+    <script>
+        InitAll($('#desktop'),$('#task-list>ul'),$('#desk-items-ul'));
+        for(var i=0;i<DeskItems.deskitems.length;i++){
+            var deskItem=new DeskItemClass(DeskItems.deskitems[i]);
+            ShortCutManager.addShortCut(deskItem);
+        }
+//        var deskItem=new DeskItemClass({appID:2,appName:"test1",logoUrl:'url(./imgs/notepad.png)',srcUrl:'./components/settings.html'});
+//        var newWindow=new WindowClass({appID:1,src:'http://www.bilibili.com/'});
+//        var newWindow2=new WindowClass({appID:2,src:'http://www.baidu.com'});
+//        windowManager.addWindow(newWindow);
+//        windowManager.addWindow(newWindow2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FileExplore</title>
+    <link href="./css/component.css" type="text/css" rel="stylesheet">
+    <script src="../../lib/jquery-3.2.1.min.js"></script>
+    <script defer src="./js/fileExplore.js"></script>
+</head>
+<body style="border-style: none;padding: 0;margin: 0">
+    <div id="main">
+        <div id="explorer-top-navbar">
+            <div id="btns-area">
+                <div class="head-btn" id="up-btn"></div>
+            </div>
+            <div id="input-area">
+                <div class="item-ico dir"></div>
+                <input type="text" id="path-input">
+            </div><div class="head-btn" id="refresh-btn"></div>
+        </div>
+        <div id="explorer-component">
+            <div id="component-table">
+                <table class="table-head">
+                    <thead>
+                    <tr>
+                        <td width="500">&nbsp;name</td>
+                        <td width="100">&nbsp;type</td>
+                    </tr>
+                    </thead>
+                </table>
+                <table class="table-body">
+                    <thead>
+                        <tr>
+                            <td width="500">&nbsp;</td>
+                            <td width="100">&nbsp;</td>
+                        </tr>
+                    </thead>
+                    <tbody style="margin-top: 10px" id="file-list">
+                        <tr>
+                            <td>
+                                <div class="item-ico dir"></div>
+                                <div class="item-name">test</div>
+                            </td>
+                            <td>dir</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="item-ico"></div>
+                                <div class="item-name">test</div>
+                            </td>
+                            <td>bin</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="status-bar">
+            <div class="status-area">no status</div>
+        </div>
+    </div>
+</body>
+</html>
